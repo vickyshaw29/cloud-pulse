@@ -23,13 +23,13 @@ const SkeletonWrapper = ({
   filesForSkeleton: FileType[];
 }) => {
   const [initialFiles, setInitialFiles] = useState<FileType[]>([])
-  const [sorting, setSorting] = useState<string>('asc');
+  const [sorting, setSorting] = useState<'asc'|'desc'>('asc');
   const { user } = useUser();
   const [docs, loading, error] = useCollection(
     user && 
     query(
       collection(db, "users", user.id, "files"),
-      // orderBy("timestamp", 'asc')
+      orderBy("timestamp", sorting)
     ),
   )
 
@@ -38,7 +38,7 @@ const SkeletonWrapper = ({
     const files = docs.docs?.map((doc)=>({
       id: doc?.id,
       fileName: doc?.data()?.fileName || doc.id,
-      timestamp: new Date(doc?.data().timeStamp?.seconds * 1000) || undefined,
+      timestamp: new Date(doc?.data().timestamp?.seconds * 1000) || undefined,
       fullName: doc?.data()?.fullName,
       type: doc?.data()?.type,
       size: doc?.data()?.size,
@@ -73,7 +73,7 @@ const SkeletonWrapper = ({
   return (
     <div>
       <div className="flex justify-end mb-2">
-        <SortingDropdown sorting={sorting} setSorting={(order)=>setSorting(order)}/>
+        <SortingDropdown sorting={sorting} setSorting={(order:any)=>setSorting(order)}/>
       </div>
       {/* table showing all the files*/}
       <DataTable columns={columns} data={initialFiles} />

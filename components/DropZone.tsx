@@ -23,7 +23,7 @@ const DropZone = () => {
       fileName: file.name,
       fullName: user.fullName,
       profileImg: user.imageUrl,
-      timeStamp: serverTimestamp(),
+      timestamp: serverTimestamp(),
       type: file.type,
       size: file.size
     })
