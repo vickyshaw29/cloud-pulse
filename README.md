@@ -4,9 +4,10 @@
 
 
 
+https://github.com/vickyshaw29/cloud-pulse/assets/69159515/5a3de3b0-b111-402a-b154-cf4cafeaa34f
 
 
-https://github.com/vickyshaw29/cloud-pulse/assets/69159515/5da80e90-4db0-46b7-b7fa-c5f01bb2dd45
+
 
 
 
