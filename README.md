@@ -46,5 +46,5 @@ Run the project locally(ensure Firebase setup)
 
 ## DeployedURL
 
-[Visit Cloud Pulse](https://cloud-pulse-moll40wb2-vickyshaw29.vercel.app/)
+[Visit Cloud Pulse](https://cloud-pulse-virid.vercel.app/)
 
