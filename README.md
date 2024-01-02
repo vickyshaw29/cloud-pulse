@@ -1,4 +1,7 @@
-## Cloud Pulse
+## Cloud Pulse   ![favicon-16x16](https://github.com/vickyshaw29/cloud-pulse/assets/69159515/b9ee9ddb-09f9-4127-a84e-77a9fc413526)
+
+
+
 
 
 
